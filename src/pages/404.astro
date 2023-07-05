@@ -1,0 +1,30 @@
+---
+import Layout from '../layouts/Layout.astro'
+---
+
+<Layout title='Página no encontrada'>
+  <main class='max-w-4xl m-auto min-h-screen grid place-content-center'>
+    <h1 class='text-black font-black mb-8 text-4xl text-center'>
+      ¡La has cagado!
+    </h1>
+    <img
+      src='https://media.tenor.com/IHdlTRsmcS4AAAAC/404.gif'
+      alt='Error 404'
+    />
+    <div class='flex justify-center'>
+      <button
+        id='go-back'
+        class='bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded mt-8 w-24'
+      >
+        Volver
+      </button>
+    </div>
+  </main>
+</Layout>
+
+<script>
+  const $button = document.getElementById('go-back')
+  $button.addEventListener('click', () => {
+    window.location.href = '/'
+  })
+</script>
